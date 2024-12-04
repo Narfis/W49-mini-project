@@ -31,7 +31,7 @@ int main()
     AssetManager tracker = new AssetManager();
 
     FillTracker(tracker);
-    LiveCurrency.FetchRates();
+    tracker.PrettyPrint();
 
     return 0;
 }

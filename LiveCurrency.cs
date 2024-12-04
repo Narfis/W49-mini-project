@@ -26,7 +26,7 @@ class Currency
 }
 
 
-    public class LiveCurrency // Class that handles fetching the exchange rates and converting currencies
+static class LiveCurrency // Class that handles fetching the exchange rates and converting currencies
 {
     private static List<Currency> currencyList = new List<Currency>();
 
@@ -57,7 +57,7 @@ class Currency
     public static double Convert(double input, string fromCurrency, string toCurrency) // Method that uses the fetched rates to convert between the given rates via Euro
     {
         double value = 0;
-            
+
         if (fromCurrency == "EUR")
         {
             value = input * currencyList.Find(c => c.GetCurrencyCode() == toCurrency).GetExchangeRateFromEUR();
